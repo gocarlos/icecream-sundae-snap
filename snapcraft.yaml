@@ -1,0 +1,35 @@
+name:               icecream-sundae
+version:            '1.0.0'
+summary:            icecream-sundae
+description:        |
+  icecream-sundae
+
+grade:              stable
+confinement:        strict
+# icon:               snap/../assets/logo/crown.svg
+
+apps:
+  cpp-dependencies:
+    command:        icecream-sundae
+    plugs:
+      - home
+
+parts:
+  cpp-depenencies:
+    # source: .
+    source: https://github.com/JPEWdev/icecream-sundae.git
+    plugin: meson
+    build-packages:
+      - build-essential
+      - libboost-filesystem-dev
+      - libboost-system-dev
+      - g++
+      - libcap-ng-dev
+      - libglib2.0-dev
+      - libicecc-dev
+      - liblzo2-dev
+      - libncursesw5-dev
+      - meson
+      - ninja-build
+
+ 
